@@ -1,21 +1,19 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { SwUpdate } from '@angular/service-worker';
+import { TodosService } from './services/todos.service';
+import { Todo } from './models/todo.model';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
-  title = 'new awesome app 4';
-  updateCheckText = '';
+export class AppComponent implements OnInit {
+  todos: Todo[];
 
-  constructor(private update: SwUpdate) {}
+  constructor(private todoService: TodosService) {}
 
-  updateCheck(): void {
-    this.update
-        .checkForUpdate()
-        .then(() => this.updateCheckText = 'resolved')
-        .catch(err => this.updateCheckText = `rejected: ${err.message}`);
+  ngOnInit() {
+    this.todoService.getTodos().subscribe(todos => this.todos = todos);
   }
 }

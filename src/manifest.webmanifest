@@ -1,8 +1,8 @@
 {
-  "name": "pwa-introduction",
-  "short_name": "pwa-introduction",
-  "theme_color": "#1976d2",
-  "background_color": "#fafafa",
+  "name": "Progressive Web Applications introduction",
+  "short_name": "PWA introduction",
+  "theme_color": "#ff0000",
+  "background_color": "#fffc00",
   "display": "standalone",
   "scope": "/",
   "start_url": "/",

@@ -6,6 +6,7 @@
         <li><a href="#intro">What is PWA?</a></li>
         <li><a href="#one">Why do we need a PWA?</a></li>
         <li><a href="#two">How to build a PWA?</a></li>
+        <li><a href="#three">Live example of remote call</a></li>
       </ul>
     </nav>
   </div>
@@ -30,89 +31,95 @@
     <section>
       <div class="content">
         <div class="inner">
-          <h2>Why do we need a Progressive Web App?</h2>
+          <h2>Why do we need a Progressive Web Application?</h2>
           <p>Before we understand why we need a progressive web app, let’s talk about some of the challenges we are facing today with native and web apps.</p>
           <p><strong>Internet Speed:</strong> you may not realize this depending on where you live, but 60% of the world’s population is still using 2G internet. Even in the US, some people have to use dialup to access internet.</p>
+          <p><strong>Slow website load:</strong> Do you know how long a user waits to click the “Close X” button if a website is too slow? Three seconds! 53% of users abandon a website if it is too slow.</p>
+          <p><strong>High friction:</strong> People don’t want to install native apps. An average user installs 0 applications in a month.</p>
+          <p><strong>User engagement:</strong> Users spend most of their time in native apps, but mobile web reach is almost three times that of native apps. Hence, most of the users are not actively engaged. However, users are spending 80% of their time on only their top three native apps.</p>
         </div>
       </div>
     </section>
     <section>
-      <a href="#" class="image"><img src="./../assets/images/pic02.jpg" alt="" data-position="top center" /></a>
       <div class="content">
         <div class="inner">
-          <h2>Feugiat consequat</h2>
-          <p>Phasellus convallis elit id ullamcorper pulvinar. Duis aliquam turpis mauris, eu ultricies erat malesuada
-            quis. Aliquam dapibus.</p>
-          <ul class="actions">
-            <li><a href="generic.html" class="button">Learn more</a></li>
-          </ul>
-        </div>
-      </div>
-    </section>
-    <section>
-      <a href="#" class="image"><img src="./../assets/images/pic03.jpg" alt="" data-position="25% 25%" /></a>
-      <div class="content">
-        <div class="inner">
-          <h2>Ultricies aliquam</h2>
-          <p>Phasellus convallis elit id ullamcorper pulvinar. Duis aliquam turpis mauris, eu ultricies erat malesuada
-            quis. Aliquam dapibus.</p>
-          <ul class="actions">
-            <li><a href="generic.html" class="button">Learn more</a></li>
-          </ul>
+          <p>PWAs help solve these problems. There are multiple reasons for using a progressive web app, but here are some of the top capabilities it provides:</p>
+          <ol>
+            <li>
+              <p><strong>F</strong>ast: PWAs provide experiences that are consistently fast. From the moment a user downloads an app to the moment they start interacting with it, everything happens really fast. Because you can cache the data, it is extremely fast to start the app again even without hitting the network.</p>
+            </li>
+            <li>
+              <p><strong>I</strong>ntegrated user experience: PWAs feel and behave like native apps. They sit in a user’s home screen, send push notifications like native apps, and have access to a device’s functionalities like native apps. The experience feels seamless and integrated.</p>
+            </li>
+            <li>
+              <p><strong>R</strong>eliable experience: With the help of service workers, we can reliably paint a picture on a user’s screen even when network has failed.</p>
+            </li>
+            <li>
+              <p><strong>E</strong>ngaging: Because we can send notifications to a user, we can really drive the engagement up by keeping the user notified and engaged with the app.</p>
+            </li>
+          </ol>
+          <p>In short, it is <strong>FIRE</strong>.</p>
         </div>
       </div>
     </section>
   </section>
 
   <!-- Two -->
-  <section id="two" class="wrapper style3 fade-up">
-    <div class="inner">
-      <h2>What we do</h2>
-      <p>Phasellus convallis elit id ullamcorper pulvinar. Duis aliquam turpis mauris, eu ultricies erat malesuada quis.
-        Aliquam dapibus, lacus eget hendrerit bibendum, urna est aliquam sem, sit amet imperdiet est velit quis lorem.
-      </p>
-      <div class="features">
-        <section>
-          <span class="icon solid major fa-code"></span>
-          <h3>Lorem ipsum amet</h3>
-          <p>Phasellus convallis elit id ullam corper amet et pulvinar. Duis aliquam turpis mauris, sed ultricies erat
-            dapibus.</p>
-        </section>
-        <section>
-          <span class="icon solid major fa-lock"></span>
-          <h3>Aliquam sed nullam</h3>
-          <p>Phasellus convallis elit id ullam corper amet et pulvinar. Duis aliquam turpis mauris, sed ultricies erat
-            dapibus.</p>
-        </section>
-        <section>
-          <span class="icon solid major fa-cog"></span>
-          <h3>Sed erat ullam corper</h3>
-          <p>Phasellus convallis elit id ullam corper amet et pulvinar. Duis aliquam turpis mauris, sed ultricies erat
-            dapibus.</p>
-        </section>
-        <section>
-          <span class="icon solid major fa-desktop"></span>
-          <h3>Veroeros quis lorem</h3>
-          <p>Phasellus convallis elit id ullam corper amet et pulvinar. Duis aliquam turpis mauris, sed ultricies erat
-            dapibus.</p>
-        </section>
-        <section>
-          <span class="icon solid major fa-link"></span>
-          <h3>Urna quis bibendum</h3>
-          <p>Phasellus convallis elit id ullam corper amet et pulvinar. Duis aliquam turpis mauris, sed ultricies erat
-            dapibus.</p>
-        </section>
-        <section>
-          <span class="icon major fa-gem"></span>
-          <h3>Aliquam urna dapibus</h3>
-          <p>Phasellus convallis elit id ullam corper amet et pulvinar. Duis aliquam turpis mauris, sed ultricies erat
-            dapibus.</p>
-        </section>
+  <section id="two" class="wrapper style3 fade-up spotlights">
+    <section>
+      <div class="content">
+        <div class="inner">
+          <h2>How to build a PWA?</h2>
+          <h3>Add necessary packages</h3>
+          <p>Run the following command to install everything that’s needed:</p>
+          <code>ng add @angular/pwa --project yourProject</code>
+          <p>This command will add basic configuration, manifest and imports to your project.</p>
+          <h3>Edit the manifest file</h3>
+          <p>Every PWA should have a manifest file. Now that Angular CLI has created one for us, we need to edit it to fit our needs. Refer to <a href="https://developer.mozilla.org/en-US/docs/Web/Manifest" target="_blank" rel="noopener noreferrer">this guide by MDN</a> for the different possibilities.</p>
+          <p>Notice how it’s already pre-filled. Feel free to change or add members to customize your PWA. If you change the theme-color value, don’t forget to change it in your index.html file as well!</p>
+          <p>If you want your Angular App to be installable on home screens, these members must be present in your manifest file:</p>
+          <ul>
+            <li><code>short_name</code> or <code>name</code></li>
+            <li><code>display</code></li>
+            <li><code>start_url</code></li>
+            <li><code>icons</code></li>
+          </ul>
+          <p>You also need to serve your app over https. For more details check out <a href="https://developers.google.com/web/fundamentals/app-install-banners/" target="_blank" rel="noopener noreferrer">this guide from Google.</a></p>
+          <h3>Edit the service worker config file</h3>
+          <p>As mentioned above, <code>ngsw-config.json</code> has been created at the root of your project. In it you can specify which files to <strong>prefetch</strong> or <strong>lazy load</strong> when downloading a version of your PWA. You can create <strong>assetGroups</strong> with different configurations, decide if the service worker should prioritize <strong>freshness</strong> or <strong>performance</strong>… and much more!</p>
+        </div>
       </div>
-      <ul class="actions">
-        <li><a href="generic.html" class="button">Learn more</a></li>
-      </ul>
-    </div>
+    </section>
+  </section>
+
+  <!-- Three -->
+  <section id="three" class="wrapper style1 fade-up spotlights">
+    <section>
+      <div class="content">
+        <div class="inner">
+          <div class="table-wrapper">
+            <h2>Data retrieved from <a href="https://jsonplaceholder.typicode.com/todos" target="_blank" rel="noopener noreferrer">https://jsonplaceholder.typicode.com/todos</a></h2>
+            <table>
+              <thead>
+                <tr>
+                  <th>User Id</th>
+                  <th>Title</th>
+                  <th>Is completed</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let todo of todos">
+                  <td>{{ todo.userId }}</td>
+                  <td>{{ todo.title }}</td>
+                  <td><input type="checkbox" name="completed" [checked]="todo.completed">
+                      <label for="completed">{{ todo.completed ? 'Completed' : 'Not Completed' }}</label></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
   </section>
 </div>
 
@@ -120,7 +127,7 @@
 <footer id="footer" class="wrapper style1-alt">
   <div class="inner">
     <ul class="menu">
-      <li>&copy; Untitled. All rights reserved.</li>
       <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
     </ul>
   </div>
+</footer>

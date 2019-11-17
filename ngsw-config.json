@@ -25,5 +25,18 @@
         ]
       }
     }
+  ],
+  "dataGroups": [
+    {
+      "name": "todo",
+      "urls": [
+        "https://jsonplaceholder.typicode.com/**"
+      ],
+      "cacheConfig": {
+        "strategy": "freshness",
+        "maxSize": 5,
+        "maxAge": "12h"
+      }
+    }
   ]
 }
